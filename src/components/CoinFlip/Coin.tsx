@@ -8,10 +8,12 @@ interface CoinProps {
 const Coin: React.FC<CoinProps> = ({ winner }) => {
   return (
     <div className={styles.container}>
-      <div className={`${styles.coin} ${styles[winner]}`}>
-        <div className={styles.side}></div>
-        <div className={styles.side}></div>
-      </div>
+      {winner && (
+        <div className={`${styles.coin} ${styles[winner]}`}>
+          <div className={styles.side}></div>
+          <div className={styles.side}></div>
+        </div>
+      )}
       <p>VS</p>
     </div>
   );

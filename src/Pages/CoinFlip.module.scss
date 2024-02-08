@@ -12,11 +12,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 25px;
+  // font-size: 24px;
   color: var(--text-color);
-  gap: 30px;
+  gap: 20px;
   align-self: center;
   width: 100%;
+}
+
+.message {
+  font-size: 24px;
+  color: white;
+  margin-top: 10px;
 }
 
 .buttonsContainer {
@@ -56,7 +62,10 @@
 }
 
 @media ((max-width: 768px)) {
+  .container {
+    padding: 10px;
+  }
   .playersInfo {
-    flex-wrap: wrap;
+    gap: 10px;
   }
 }

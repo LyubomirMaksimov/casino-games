@@ -3,6 +3,7 @@ import Player from "../components/CoinFlip/Player";
 import styles from "./CoinFlip.module.scss";
 import Coin from "../components/CoinFlip/Coin";
 import { FidgetSpinner } from "react-loader-spinner";
+
 const DUMMY_DATA = {
   player1: {
     name: "Player1",
@@ -16,11 +17,12 @@ const DUMMY_DATA = {
   },
 };
 
-type CoinSide = "heads" | "tails";
+type CoinSide = "heads" | "tails" | "";
 
 const CoinFlip: React.FC = () => {
   const [winner, setWinner] = useState<CoinSide>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>("");
 
   const [p1ItemsCount, setp1ItemsCount] = useState<number>(0);
   const [p1ItemsValue, setp1ItemsValue] = useState<number>(0);
@@ -65,8 +67,10 @@ const CoinFlip: React.FC = () => {
 
   const processResult = (result: CoinSide) => {
     if (result === "heads") {
+      setMessage("Congratulation, You Won");
       // setHeadsCount((prev) => prev + 1);
     } else {
+      setMessage("Sorry, You Lost");
       // setTailsCount((prev) => prev + 1);
     }
 
@@ -74,7 +78,8 @@ const CoinFlip: React.FC = () => {
   };
 
   const flipCoin = () => {
-    setWinner("");
+    setWinner(".");
+    setMessage("");
     const random = parseFloat((Math.random() * 100).toFixed(2));
     console.log(random);
     const result: CoinSide = random <= p2WinChance ? "heads" : "tails";
@@ -131,6 +136,7 @@ const CoinFlip: React.FC = () => {
           </>
         )}
       </div>
+      <p className={styles.message}>{message}</p>
     </div>
   );
 };

@@ -3,6 +3,8 @@
   list-style: none;
   display: flex;
   justify-content: center;
+  text-align: center;
+  align-items: center;
   height: 80px; // Set the height to 80px
   background-color: var(--background-color); // Example background color
 
@@ -39,5 +41,13 @@
         width: calc(100% - 8px);
       }
     }
+  }
+}
+
+@media ((max-width: 768px)) {
+  .navbar {
+    // li {
+    //   font-size: 8px;
+    // }
   }
 }
