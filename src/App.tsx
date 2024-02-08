@@ -23,7 +23,7 @@ const App: React.FC = () => {
         <Route path="/roulette" element={<Roulette />} />
         <Route path="/crashgame" element={<CrashGame />} />
         {/* Route guard */}
-        <Route path="/*" element={<Navigate to="/" replace />} />
+        {/* <Route path="/*" element={<Navigate to="/" replace />} /> */}
       </Routes>
     </div>
   );
