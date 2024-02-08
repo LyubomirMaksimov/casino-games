@@ -18,10 +18,10 @@ const App: React.FC = () => {
     >
       <Navbar />
       <Routes>
-        <Route path="/coinflip" element={<CoinFlip />} />
-        <Route path="/itemupgrader" element={<ItemUpgrader />} />
-        <Route path="/roulette" element={<Roulette />} />
-        <Route path="/crashgame" element={<CrashGame />} />
+        <Route path="/casino-games/coinflip" element={<CoinFlip />} />
+        <Route path="/casino-games/itemupgrader" element={<ItemUpgrader />} />
+        <Route path="/casino-games/roulette" element={<Roulette />} />
+        <Route path="/casino-games/crashgame" element={<CrashGame />} />
       </Routes>
     </div>
   );
