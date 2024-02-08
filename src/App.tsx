@@ -1,6 +1,6 @@
 // App.tsx
 import React from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/NavBar/Navbar";
 import CoinFlip from "./Pages/CoinFlip";
 import ItemUpgrader from "./Pages/ItemUpgrader";
