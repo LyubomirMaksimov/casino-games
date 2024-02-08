@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #2b2c37;
+  --background-color: #20212c;
+  --text-color: #ffffff;
+
+  --paragraph-color: #828fa3;
+
+  --red-color: #ea5555;
+  --red-hover-color: #ff9898;
+
+  --yellow-color: #dab44e;
+  --yellow-hover-color: #cfc19a;
+
+  --green-color: #53b839;
+  --green-hover-color: #93c287;
+
+  background-color: var(--primary-color);
+}

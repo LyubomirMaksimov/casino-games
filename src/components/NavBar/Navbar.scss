@@ -1,0 +1,43 @@
+// Navbar.scss
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  height: 80px; // Set the height to 80px
+  background-color: var(--background-color); // Example background color
+
+  li {
+    margin: auto 30px;
+    font-size: 18px;
+
+    :hover {
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      position: relative;
+      color: #fff;
+
+      &.active {
+        color: rgb(231, 74, 74);
+        font-weight: bold;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: rgb(231, 74, 74);
+        transition: width 0.3s ease-out;
+      }
+
+      &:hover::before {
+        width: calc(100% - 8px);
+      }
+    }
+  }
+}
