@@ -1,6 +1,6 @@
 // App.tsx
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Navbar from "./components/NavBar/Navbar";
 import CoinFlip from "./Pages/CoinFlip";
 import ItemUpgrader from "./Pages/ItemUpgrader";
@@ -22,6 +22,8 @@ const App: React.FC = () => {
         <Route path="/itemupgrader" element={<ItemUpgrader />} />
         <Route path="/roulette" element={<Roulette />} />
         <Route path="/crashgame" element={<CrashGame />} />
+        {/* Route guard */}
+        <Route path="/*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );
