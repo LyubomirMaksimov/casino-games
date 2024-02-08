@@ -98,21 +98,30 @@ const CoinFlip: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.playersInfo}>
-        <Player
-          name={DUMMY_DATA.player1.name}
-          image={DUMMY_DATA.player1.image}
-          itemsCount={p1ItemsCount}
-          itemsValue={p1ItemsValue}
-          winChance={p1WinChance}
-        />
+        <div className={message === "Sorry, You Lost" ? `${styles.hide}` : ""}>
+          <Player
+            name={DUMMY_DATA.player1.name}
+            image={DUMMY_DATA.player1.image}
+            itemsCount={p1ItemsCount}
+            itemsValue={p1ItemsValue}
+            winChance={p1WinChance}
+          />
+        </div>
+
         <Coin winner={winner} />
-        <Player
-          name={DUMMY_DATA.player2.name}
-          image={DUMMY_DATA.player2.image}
-          itemsCount={p2ItemsCount}
-          itemsValue={p2ItemsValue}
-          winChance={p2WinChance}
-        />
+        <div
+          className={
+            message === "Congratulation, You Won" ? `${styles.hide}` : ""
+          }
+        >
+          <Player
+            name={DUMMY_DATA.player2.name}
+            image={DUMMY_DATA.player2.image}
+            itemsCount={p2ItemsCount}
+            itemsValue={p2ItemsValue}
+            winChance={p2WinChance}
+          />
+        </div>
       </div>
       <div className={styles.buttonsContainer}>
         {loading && (
